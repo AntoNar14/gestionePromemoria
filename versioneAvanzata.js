@@ -68,7 +68,19 @@ function ricercaAttivita(arrayA)
 }
 function visualizzaNotifiche(arrayA)
 {
-    
+    let ver=false;
+    let numA=0;
+    for(let i=0; i<arrayA.length; i++)
+    {
+        if(arrayA[i].stato=="Non completata!")
+        {
+            numA++;
+            console.log("Attività n° "+(numA)+" nome attività: "+arrayA[i].nome);   
+            ver=true;   
+        }
+    }
+    if(!ver)
+        console.log("Non ci sono attività da completare!");
 }
 function visualizzaElencoAttivita(arrayA)
 {
@@ -108,7 +120,8 @@ function main()
         console.log("3) Modifica attività");
         console.log("4) Spunta attività");
         console.log("5) Ricerca attività");
-        console.log("6) Visualizza elenco attività");
+        console.log("6) Visualizza notifiche");
+        console.log("7) Visualizza elenco attività");
         scelta1=Number(prompt("Inserire l'azione che si vuole compiere: "));
         switch(scelta1)
         {
@@ -127,7 +140,10 @@ function main()
             case 5:
                 ricercaAttivita(arrayA);
                 break;
-            case 6: 
+            case 6:
+                visualizzaNotifiche(arrayA);
+                break;
+            case 7: 
                 visualizzaElencoAttivita(arrayA);
                 break;
             default:
