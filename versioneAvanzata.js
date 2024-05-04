@@ -149,7 +149,7 @@ function main()
             default:
                 console.log("Comando inserito non valido!");
         }
-        scelta2=prompt("Uscire dal programma (Si o No): ");
+        scelta2=prompt("Uscire dal programma (si o no): ");
         scelta2.toLowerCase();
         if(scelta2==="si")
             break;
