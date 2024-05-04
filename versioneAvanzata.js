@@ -38,17 +38,41 @@ function modificaAttivita(arrayA)
         console.log("Indice inserito non valido!");
     }
 }
-function spuntaAttivita()
+function spuntaAttivita(arrayA)
 {
-
+    visualizzaElencoAttivita(arrayA);
+    let sceltaAtt = Number(prompt("Inserire il numero dell'attività che si vuole spuntare: "));
+    if ((sceltaAtt - 1) < arrayA.length) 
+    {
+        arrayA[sceltaAtt-1].stato="Completata!"
+    } else 
+    {
+        console.log("Indice inserito non valido!");
+    }
 }
-function ricercaAttivita()
+function ricercaAttivita(arrayA)
 {
-
+    let trovata=false;
+    let scelta=prompt("Inserire l'attività che si vuole ricercare: ");
+    for(let i=0; i<arrayA.length; i++)
+    {
+        if(arrayA[i].nome==scelta)
+        {
+            console.log("L'attività "+scelta+" è presente nell'elenco!");
+            trovata=true;
+            break;
+        }
+    }
+    if(!trovata)
+        console.log("L'attività "+scelta+" non è presente nell'elenco!");
+}
+function visualizzaNotifiche(arrayA)
+{
+    
 }
 function visualizzaElencoAttivita(arrayA)
 {
-    if(arrayA.length>=0)
+    if(arrayA.length>0)
     {
         console.log("Elenco delle attività:");
         for(let i = 0; i < arrayA.length; i++) 
@@ -98,10 +122,10 @@ function main()
                 modificaAttivita(arrayA);
                 break;
             case 4:
-                spuntaAttivita(attivita);
+                spuntaAttivita(arrayA);
                 break;
             case 5:
-                ricercaAttivita(attivita);
+                ricercaAttivita(arrayA);
                 break;
             case 6: 
                 visualizzaElencoAttivita(arrayA);
