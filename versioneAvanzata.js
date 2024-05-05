@@ -13,6 +13,15 @@ function inserisciAttivita(arrayA)
     nuovaAttivita.scadenza = Number(prompt("Inserire la scadenza dell'attività in ore: "));
     arrayA.push({...nuovaAttivita});
 }
+
+function ordinaAttivitaPerNome(arrayA) {
+    arrayA.sort((a, b) => a.nome.localeCompare(b.nome));
+}
+
+function ordinaAttivitaPerScadenza(arrayA) {
+    arrayA.sort((a, b) => a.scadenza - b.scadenza);
+}
+
 function cancellaAttivita(arrayA)
 {
     visualizzaElencoAttivita(arrayA);
@@ -121,7 +130,8 @@ function main()
         console.log("4) Spunta attività");
         console.log("5) Ricerca attività");
         console.log("6) Visualizza notifiche");
-        console.log("7) Visualizza elenco attività");
+        console.log("7) Visualizza elenco attività ordinata per nome");
+        console.log("8) Visualizza elenco attività ordinata per scadenza ");
         scelta1=Number(prompt("Inserire l'azione che si vuole compiere: "));
         switch(scelta1)
         {
@@ -144,6 +154,11 @@ function main()
                 visualizzaNotifiche(arrayA);
                 break;
             case 7: 
+                ordinaAttivitaPerNome(arrayA);
+                visualizzaElencoAttivita(arrayA);
+                break;
+            case 8:
+                ordinaAttivitaPerScadenza(arrayA);
                 visualizzaElencoAttivita(arrayA);
                 break;
             default:
