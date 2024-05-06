@@ -13,15 +13,6 @@ function inserisciAttivita(arrayA)
     nuovaAttivita.scadenza = Number(prompt("Inserire la scadenza dell'attività in ore: "));
     arrayA.push({...nuovaAttivita});
 }
-
-function ordinaAttivitaPerNome(arrayA) {
-    arrayA.sort((a, b) => a.nome.localeCompare(b.nome));
-}
-
-function ordinaAttivitaPerScadenza(arrayA) {
-    arrayA.sort((a, b) => a.scadenza - b.scadenza);
-}
-
 function cancellaAttivita(arrayA)
 {
     visualizzaElencoAttivita(arrayA);
@@ -90,6 +81,15 @@ function visualizzaNotifiche(arrayA)
     }
     if(!ver)
         console.log("Non ci sono attività da completare!");
+}
+function ordinaAttivitaPerNome(arrayA) 
+{
+    arrayA.sort((a, b) => a.nome.localeCompare(b.nome));
+}
+
+function ordinaAttivitaPerScadenza(arrayA) 
+{
+    arrayA.sort((a, b) => a.scadenza - b.scadenza);
 }
 function visualizzaElencoAttivita(arrayA)
 {
