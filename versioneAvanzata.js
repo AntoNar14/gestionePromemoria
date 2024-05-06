@@ -131,7 +131,8 @@ function main()
         console.log("5) Ricerca attività");
         console.log("6) Visualizza notifiche");
         console.log("7) Visualizza elenco attività ordinata per nome");
-        console.log("8) Visualizza elenco attività ordinata per scadenza ");
+        console.log("8) Visualizza elenco attività ordinata per scadenza");
+        console.log("9) Visualizza elenco attività non ordinato");
         scelta1=Number(prompt("Inserire l'azione che si vuole compiere: "));
         switch(scelta1)
         {
@@ -159,6 +160,9 @@ function main()
                 break;
             case 8:
                 ordinaAttivitaPerScadenza(arrayA);
+                visualizzaElencoAttivita(arrayA);
+                break;
+            case 9: 
                 visualizzaElencoAttivita(arrayA);
                 break;
             default:
