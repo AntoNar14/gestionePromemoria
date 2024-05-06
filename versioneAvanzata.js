@@ -102,7 +102,7 @@ function visualizzaElencoAttivita(arrayA)
             console.log("Nome: " + arrayA[i].nome);
             console.log("Stato: " + arrayA[i].stato);
             console.log("Categoria: " + arrayA[i].categoria);
-            console.log("Scadenza: " + arrayA[i].scadenza);
+            console.log("Scadenza: " + arrayA[i].scadenza+" ore");
             console.log("----------------------------");
         }
     }
@@ -133,6 +133,7 @@ function main()
         console.log("7) Visualizza elenco attività ordinata per nome");
         console.log("8) Visualizza elenco attività ordinata per scadenza");
         console.log("9) Visualizza elenco attività non ordinato");
+        console.log("10) Termina programma");
         scelta1=Number(prompt("Inserire l'azione che si vuole compiere: "));
         switch(scelta1)
         {
@@ -165,13 +166,11 @@ function main()
             case 9: 
                 visualizzaElencoAttivita(arrayA);
                 break;
+            case 10:
+                return;
             default:
                 console.log("Comando inserito non valido!");
         }
-        scelta2=prompt("Uscire dal programma (si o no): ");
-        scelta2.toLowerCase();
-        if(scelta2==="si")
-            break;
     }
 }
 main();
