@@ -120,7 +120,7 @@ function main()
         scadenza:0
     }
     let arrayA=[];
-    let scelta1=0, scelta2="";
+    let scelta1=0;
     while(true)
     {
         console.log("Elenco delle azioni che si possono effettuare:");

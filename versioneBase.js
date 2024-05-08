@@ -57,7 +57,7 @@ function ricercaAttivita(attivita)
 function main()
 {
     let attivita=[];
-    let scelta1=0, scelta2="";
+    let scelta1=0;
     while(true)
     {
         console.log("Elenco delle azioni che si possono effettuare:");
@@ -67,6 +67,7 @@ function main()
         console.log("4) Spunta attività");
         console.log("5) Ricerca attività");
         console.log("6) Visualizza elenco attività");
+        console.log("7) Termina programma");
         scelta1=Number(prompt("Inserire l'azione che si vuole compiere: "));
         switch(scelta1)
         {
@@ -88,13 +89,11 @@ function main()
             case 6: 
                 visualizzaElencoAttivita(attivita);
                 break;
+            case 7:
+                return;
             default:
                 console.log("Comando inserito non valido!");
         }
-        scelta2=prompt("Uscire dal programma (Si o No): ");
-        scelta2.toLowerCase();
-        if(scelta2==="si")
-            break;
     }
 }
 main();
