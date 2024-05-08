@@ -113,12 +113,6 @@ function visualizzaElencoAttivita(arrayA)
 }
 function main()
 {
-    let attivita={
-        nome:"",
-        stato:"Non completata!",
-        categoria:"",
-        scadenza:0
-    }
     let arrayA=[];
     let scelta1=0;
     while(true)
