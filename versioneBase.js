@@ -35,7 +35,7 @@ function modificaAttivita(attivita)
     if((sceltaAtt-1)<=attivita.length)
         attivita[sceltaAtt-1]=(prompt("Inserire la nuova attività: ")+" (Non completata!)");
     else
-        conaole.log("Indice inserito non valido!");
+        console.log("Indice inserito non valido!");
 }
 function spuntaAttivita(attivita)
 {
